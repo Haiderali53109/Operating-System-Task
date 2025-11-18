@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Node.js + Docker App</title>
+</head>
+<body>
+  <h1>Welcome to My Node.js + Docker App</h1>
+  <p>This is the frontend served from Node.js inside a Docker container.</p>
+
+  <h2>Click below to fetch data from the backend API:</h2>
+  <button onclick="fetchData()">Fetch API Data</button>
+
+  <pre id="output" style="margin-top:20px; background:#eee; padding:10px;"></pre>
+
+  <script>
+    function fetchData() {
+      fetch('/api/data')
+        .then(res => res.json())
+        .then(data => {
+          document.getElementById('output').textContent =
+            JSON.stringify(data, null, 2);
+        });
+    }
+  </script>
+</body>
+</html>
