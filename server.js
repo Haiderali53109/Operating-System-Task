@@ -11,7 +11,7 @@ app.get('/api/data', (req, res) => {
   res.json({
     message: "This is JSON data from the backend API!",
     time: new Date().toISOString(),
-    author: "Saif Khan"
+    author: "haider ali"
   });
 });
 
